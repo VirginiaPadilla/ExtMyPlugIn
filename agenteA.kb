@@ -1,0 +1,3 @@
+def(calcula_volumen(S), (reserva(S, F), save(F))).
+if_(volumen(Litros), [calcula_volumen(Litros)]).
+if_(entrada_falla, [cierra_chorro]). 

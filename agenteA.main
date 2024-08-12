@@ -1,0 +1,41 @@
+% agentepersonal.main
+%
+% This code is free software like the rest of Gloria and Galatea
+%
+% Jacinto Davila
+% 2007/4/23
+
+/****************************************************** libraries */
+% :- ['C:/Users/Virginia/Galatea/galatea/glorias/gloria/flach/mis.pl'].   %learning library.
+
+% This must be included to use gloria and its reasoning engine
+:- ['C:/Users/Virginia/Galatea/galatea/glorias/gloria/gloria.pl'].
+
+% the agent's knowledge base
+:- ['C:/Users/Virginia/gvSIG1.11/extMyPlugin/agenteA.kb'].
+
+%:- dynamic ghistory/1.  % the background changes.
+:- dynamic ghistory/1, goalsmem/3, actionsmem/4.
+
+tracefile('C:/Users/Virginia/gvSIG1.11/extMyPlugin/Agente.dot').  % see flach/graphviz.pl
+
+/************************************************** control stuff */
+abd(save).
+abd(volumen).
+abd(entrada_falla).
+abd(cierra_chorro). 
+ 
+
+for_testing_only(entrada_falla).   
+for_testing_only(volumen(_)). 
+  
+ 
+%
+user_built(reserva(S,F)).
+ 
+ 
+reserva(S,F) :- F is  S - 7693.
+% volB(F,M) :- M is F  - random(10).
+ 
+/**************** bias, types and background theory for learning */
+  yo(C) :- cycling(200, [[(todo(see,volumen_f(C)), true), true, true, [], []] ]).

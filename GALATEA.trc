@@ -1,0 +1,5 @@
+LNodes=[1;1;1;0] -> (A)Delta[0]
+0.0	(A)Delta[0]	Node ***->act()	0.0
+>>>>>  1	0.0	Delta[0]	FEL=[7;1;/] -> (A)Delta[0],1.0 -> (A)Delta[0],1.0 -> (A)Delta[0],1.0 -> (A)Delta[0],1.0 -> (A)Delta[0],1.0 -> (A)Delta[0],1.0 -> (A)Delta[0],1.0
+0.0	Act (A)Delta[0]
+0.0	(A)Delta[0]	Node ***->act()	1.0
